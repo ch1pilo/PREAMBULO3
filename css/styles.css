@@ -1,0 +1,345 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #042a39;
+    --primari-gradiente: #19475a;
+    --secundary: #e28953;
+    --secundary-light: #f5b895;
+    --secundary-lightest: #fce8dc;
+    --tercero: #fcf0ea;
+    --primary-transparente: rgba(4, 42, 57, 0.479);
+    --primary-dark: rgb(0, 0, 0);
+}
+
+body{
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primari-gradiente) 100%);
+    font-family: 'Poppins', sans-serif;
+    color: var(--tercero);
+    min-height: 100vh;
+    position: relative;
+}
+
+i{
+    font-size: 30px;
+    color: var(--tercero);
+    transition: all 0.3s ease;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px;
+}
+
+.redes i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--secundary);
+}
+
+.redes i:hover {
+    color: var(--primary);
+    transform: translateY(-1px);
+    text-shadow: 0 1px 8px var(--tercero);
+}
+
+
+.card img{
+    width: 98%;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    filter: brightness(70%) contrast(110%);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.contenedor img{
+    height: 600px;
+    background: none;
+}
+
+.card:hover img {
+    transform: scale(1.02);
+    filter: brightness(80%) contrast(115%);
+}
+
+.card{
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 25px 15px;
+    background: rgba(36, 57, 78, 0.938);
+    border-radius: 20px;
+    box-shadow: 0 3px 10px var(--secundary);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    gap: 0;
+}
+
+.card {
+    min-width: 100%;
+    height: 350px;
+    box-sizing: border-box;
+    padding: 25px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--tercero);
+    line-height: 1.6;
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.carousel-btn {
+    background: var(--secundary);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: #ecf0f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background: var(--secundary);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--secundary);
+    margin: 0 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator.active {
+    background: #3498db;
+    transform: scale(1.2);
+    border: 2px solid #ecf0f1;
+}
+
+.indicator:hover {
+    background: #3498db;
+    transform: scale(1.1);
+}
+
+.baner .contexto{
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: var(--tercero);
+    font-weight: 600;
+    text-shadow: var(--primari-gradiente) 2px 2px 8px;
+    border-bottom: solid 3px var(--secundary);
+    padding: 25px;
+    border-radius: 15px;
+    background: var(--primary-transparente);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.baner p{
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+h1, h2, .contenedor p {
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+h1{
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+    color: var(--tercero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-shadow: 1px 1px 3px var(--tercero);
+}
+
+.contenedor p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--tercero);
+}
+
+footer{
+    background: linear-gradient(135deg, var(--primary) 30%, var(--primari-gradiente) 70%);
+    color: var(--tercero);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid rgba(127, 140, 141, 0.3);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efectos de partículas mejorados */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    
+    .carousel-container {
+        height: 500px;
+        padding: 15px 10px;
+        margin-top: 20px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .baner .contexto {
+        width: 80%;
+        left: 10%;
+        padding: 15px;
+    }
+    
+    .card p {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-btn {
+        margin-top: 10px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 400px;
+    }
+    .card{
+        height: 310px;
+        padding: 5px;
+        background: none;
+        border: none;
+    }
+
+    .carousel-controls{
+        margin-top: 5px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contenedor p {
+        font-size: 1.1rem;
+    }
+    
+    .redes {
+        gap: 15px;
+    }
+    
+    i {
+        font-size: 25px;
+    }
+}
