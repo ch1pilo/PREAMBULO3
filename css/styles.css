@@ -54,6 +54,8 @@ i{
     text-shadow: 0 1px 8px var(--tercero);
 }
 
+header{
+}
 
 .card img{
     width: 98%;
@@ -276,6 +278,8 @@ footer{
 
 /* Responsive */
 @media (max-width: 768px) {
+    header {
+    }
     
     .carousel-container {
         height: 500px;
