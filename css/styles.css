@@ -312,6 +312,9 @@ footer{
         height: 45px;
     }
 }
+a{
+    text-decoration: none;
+}
 
 @media (max-width: 480px) {
     .carousel-container {
